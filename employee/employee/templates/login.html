@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form action="{% url 'emplyeeapp:fn_Emplogin' %}" method="post">
+    {% csrf_token %}
+<div class="form">
+<div class="container"><br>
+    <div class="page-content" id="divContent">
+        <div class="page-header">
+                <h1>
+                    Login here..
+                </h1><br>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">
+                        Mail Id<span class="required" style="color:red;">*</span>
+                    </label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="input-group col-xs-12 col-sm-9">
+                            <input type="text" class="form-control input-sm" name="txtUsername" placeholder="Enter your email id">
+                        </div>
+                    </div>
+                </div>
+        </div>
+<br>
+       <div class="row">
+            <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">
+                        Password<span class="required" style="color:red;">*</span>
+                    </label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="input-group col-xs-12 col-sm-9">
+                            <input type="text" class="form-control input-sm" name="txtPassword" placeholder="Enter your password">
+                        </div>
+                    </div>
+                </div>
+        </div>
+<br>
+        <div class="row">
+            <div class="form-group">
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="input-group col-xs-12 col-sm-9">
+                            <input type="submit" name="Login" class="btn btn-primary">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h5>Login to access this website!</h5>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</form>
+{% endblock %}

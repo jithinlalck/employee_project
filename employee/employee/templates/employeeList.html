@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+        <th scope="col">Number</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for emp in emp_list %}
+    <tr>
+      <td>{{ emp.id }}</th>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.email }}</td>
+      <td>{{ emp.phone }}</td>
+      <td><a class="btn btn-primary btn-sm" href="{% url 'emplyeeapp:view' emp.id %}">View More</a></td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+{% endblock %}

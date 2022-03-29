@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="cotainer-fluid border">
+    <br>
+     <div class="row">
+        <div class="col-sm text-center">
+            {% if emp.image %}-->
+                <img src="{{ emp.image.url }}" class="rounded" alt="image">
+            {% else %}
+                <img src="{% static 'image/employee.png' %}" class="rounded" alt="image">
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <span><strong>EmpId :</strong></span>&nbsp;&nbsp;{{ emp.id }}<br>
+            <span><strong>Name :</strong></span>&nbsp;&nbsp;{{ emp.name }}<br>
+            <span><strong>Phone :</strong></span>&nbsp;&nbsp;{{ emp.phone }}<br>
+            <span><strong>Email :</strong></span>&nbsp;&nbsp;{{ emp.email }}<br>
+            <span><strong>Address :</strong></span>&nbsp;&nbsp;{{ emp.address }}<br>
+        </div>
+    </div>
+<!--    <div class="text-left">-->
+<!--        {% if emp.image %}-->
+<!--        <img src="{{ emp.image.url }}" class="rounded" alt="image">-->
+<!--        {% else %}-->
+<!--        <img src="{% static 'image/employee.png' %}" class="rounded" alt="image">-->
+<!--        {% endif %}-->
+<!--    </div>-->
+
+</div>
+<!--{{ emp.name }}<br>-->
+<!--{{ emp.email }}-->
+{% endblock %}
